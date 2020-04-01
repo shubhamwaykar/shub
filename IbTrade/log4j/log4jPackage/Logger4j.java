@@ -5,17 +5,16 @@ import org.apache.logging.log4j.Logger;
 
 public class Logger4j {
 	
-	private static Logger Logger = LogManager.getLogger(Logger4j.class);
-	
-	public static void main (String[] args) {
-		
-		System.out.println("\n  IBtrade Project....!   \n");
-		
-		Logger.trace("This is trace message");
-		Logger.info("This is information message");
-		Logger.error("This is an arror message");
-		Logger.warn("This is warning message");
-		Logger.fatal("This is a fatal message");
+	private static final Logger LOG = LogManager.getLogger(Logger4j.class);
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        LOG.debug("This is a debug statement");
+        LOG.info("This is Info Log");
+        LOG.warn("This is Warn Log");
+        LOG.error("This is Error Log", new NullPointerException());
+        LOG.fatal("This is Fatal Log");
+        LOG.trace("This is trace Log");
 		
 		System.out.println("\n  completed");
 	}
