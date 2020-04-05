@@ -26,6 +26,7 @@ public class TestCLassMarketOrder extends PojoClass{
 	@BeforeClass
 	public void beforeClass() {
 		driver2= openChromeBrowser();
+		driver2= openMozillaFirefox();
 	}
 	
 	@BeforeMethod
