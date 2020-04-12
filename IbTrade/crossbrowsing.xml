@@ -3,30 +3,25 @@
 <suite name="Suite">
 
   <test name= "chromeTestCases">
-  <parameter name="browsers" value="chrome"/>
+  <parameter name="browsers" value="firefox"/>
   <classes>
-  <class name= "testpackmavenibtrade.TestClassMarketOrder" />
+  <class name= "testClasses.MarketOrder" />
   </classes>
   </test>
   
   <test name="firefoxTestCases">
   <parameter name= "browsers" value="firefox"/>
   <classes>
-  <class name= "testpackmavenibtrade.TestClassMarketOrder" />
+  <class name= "testClasses.MarketOrder" />
   </classes>
   </test>
   
   <test name="ieTestCases">
   <parameter name= "browsers" value= "ie" />
   <classes>
-  <class name ="testpackmavenibtrade.TestClassMarketOrder" />
+  <class name ="testClasses.MarketOrderr" />
   </classes>   
   </test>
 
-
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="testpackmavenIbtrade.TestCLassMarketOrder"/>
-    </classes>
-  </test> <!-- Test -->
+<!-- Test -->
 </suite> <!-- Suite -->
