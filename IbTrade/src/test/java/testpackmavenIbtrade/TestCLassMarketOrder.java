@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import browser.configuration.PojoClass;
@@ -24,10 +25,21 @@ public class TestCLassMarketOrder extends PojoClass{
 	MpinPomClass mpin;
 	
 	@BeforeClass
-	public void beforeClass() {
-		driver2= openChromeBrowser();
-		driver2= openMozillaFirefox();
-		driver2= openChromeBrowser();
+	@Parameters ("browsers")
+	public void verifyPageTitle(String browserName) {
+		
+		if(browserName.equalsIgnoreCase("chrome")) 
+		{
+			driver2= openChromeBrowser();
+		}
+		else if(browserName.equalsIgnoreCase("firefox"))
+		{
+			driver2= openMozillaFirefox();
+		}
+		else if(browserName.equalsIgnoreCase("IE"))
+		{
+			driver2= openInternetExplorer();
+		}
 	}
 	
 	@BeforeMethod
